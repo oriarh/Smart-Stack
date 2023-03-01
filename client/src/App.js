@@ -1,17 +1,16 @@
 import './App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Navigation from './components/Navigation'
+import Landingpage from './components/Landingpage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Navigation/>
+    <div className="">
+      <header className="">
         <Routes>
           {/* <Route path='/signup' element={<Signup/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/herosection' element={<Herosection/>}/> */}
+          <Route path='/login' element={<Login/>}/> */}
+          <Route path='/' element={<Landingpage/>}/>
         </Routes>
       </header>
     </div>
