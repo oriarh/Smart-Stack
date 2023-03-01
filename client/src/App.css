@@ -1,0 +1,55 @@
+.headerName {
+    width: 320px;
+    margin: 0 20px;
+    font-weight: 300;
+    text-align: right;
+    text-decoration: none;
+    color: palegoldenrod !important;
+}
+
+@media screen and (max-width: 991px) {
+    .headerName {
+        margin: 1% auto;
+        text-align: center;
+    }
+}
+
+.headerLinks {
+    margin: auto !important;
+    text-decoration: none !important;
+    color: palegoldenrod;
+}
+
+@media screen and (max-width: 991px) {
+    .headerLinks {
+        text-align: center;
+        margin: 0.10% auto;
+    }
+}
+
+header {
+    background-color: darkcyan;
+    padding: 1%;
+    margin-bottom: 10px;
+}
+
+.navLinks:link, .navLinks:visited {
+    color: palegoldenrod;
+    background-color: transparent;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.navLinks.active {
+    color: palegoldenrod;
+    background-color: grey;
+    text-decoration: none;
+}
+
+.navLinks:hover {
+    color: black;
+    background-color: transparent;
+}
