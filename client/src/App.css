@@ -27,7 +27,7 @@
     }
 }
 
-header {
+.headerRow {
     background-color: darkcyan;
     padding: 1%;
     margin-bottom: 10px;
@@ -52,4 +52,21 @@ header {
 .navLinks:hover {
     color: black;
     background-color: transparent;
+}
+
+#topImg {
+    width: 25%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.welcomeMessage {
+    position: absolute;
+    align-content: center;
+    background-color: darkcyan;
+    font-size: 30px;
+    color: palegoldenrod;
+    padding: 10px;
+    font-weight: 200;
 }

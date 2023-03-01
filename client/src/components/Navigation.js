@@ -22,10 +22,10 @@ export default function () {
             <div className='container-fluid'>
                 <div className="row headerRow">
                     <div className="col-md-12 col-lg-7">
-                        <h2 className="headerName"><Link className="headerName" to='/Project-Portfolio-React-'>Smart Stack</Link></h2>
+                        <h2 className="headerName"><Link className="headerName" to='/'>Smart Stack</Link></h2>
                     </div>
-                    <div className="col-lg-auto headerLinks"><CustomLink to="/aboutme">Login</CustomLink></div>
-                    <div className="col-lg-auto headerLinks"><CustomLink to="/portfolio">Signup</CustomLink></div>
+                    <div className="col-lg-auto headerLinks"><CustomLink to="/login">Login</CustomLink></div>
+                    <div className="col-lg-auto headerLinks"><CustomLink to="/signup">Signup</CustomLink></div>
                 </div>
             </div>
         </nav>
