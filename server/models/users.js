@@ -23,5 +23,19 @@ const usersSchema = new mongoose.Schema({
      password: {
         type: String,
         required: [true, 'Password required'],
+     },
+     favorites: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "QAndA"
      }
+},
+{
+    id: false,
+    toJSON: {
+        virtuals: true,
+        getters: true,
+    },
 });
+
+const User =  mongoose.model('User', usersSchema);
+module.exports = User;
