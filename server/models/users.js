@@ -24,10 +24,10 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password required'],
      },
-     favorites: {
+     favorites: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "QAndA"
-     }
+        ref: "Question"
+     }]
 },
 {
     id: false,
@@ -37,5 +37,5 @@ const usersSchema = new mongoose.Schema({
     },
 });
 
-const User =  mongoose.model('User', usersSchema);
-module.exports = User;
+const Users =  mongoose.model('User', usersSchema);
+module.exports = Users;
