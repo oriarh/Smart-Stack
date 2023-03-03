@@ -8,7 +8,9 @@ export default function FlashcardApp() {
   return (
     <>        
         <Navigation/>
-        <FlashcardList flashcardsListProp = {flashcards} />
+        <div className='container'>
+          <FlashcardList flashcardsListProp = {flashcards} />
+        </div>
     </>
   )
 }   
