@@ -124,3 +124,13 @@
     max-width: 900px;
     margin: 5rem 2rem;
 }
+
+.footer {
+    font-size: 28px;
+    background-color: darkcyan;
+    color: palegoldenrod;
+    text-align: -webkit-center;
+    font-weight: 200 !important;
+    padding: 1%;
+    margin-top: 1%;
+}
