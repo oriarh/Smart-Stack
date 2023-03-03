@@ -31,6 +31,7 @@ module.exports = {
     createQuestion: async(req, res) => {
         let newQuestion = await Question.create({
             questionTitle: req.body.questionTitle,
+            difficulty: req.body.difficulty,
             questionText: req.body.questionText,
             answerText: req.body.answerText,
             username: req.body.username

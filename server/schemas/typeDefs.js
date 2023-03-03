@@ -12,6 +12,7 @@ const typeDefs = gql`
     type Question {
         _id: ID!
         questionTitle: String!
+        difficulty: String!
         questionText: String!
         answerText: String!
         username: String
