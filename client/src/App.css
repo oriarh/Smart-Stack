@@ -70,3 +70,50 @@
     padding: 10px;
     font-weight: 200;
 }
+
+.card.card {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25rem;
+    box-shadow: 0 0 5px 2px;
+    transform-style: preserve-3d;
+    width: 250px;
+    height: 250px;
+    transform:perspective(1000px) rotateY(var(--rotate-y, 0));
+    transition: 150ms;
+}
+
+.card.flip {
+    --rotate-y: 180deg;
+}
+
+.card .front,
+.card .back {
+    position: absolute !important;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+
+.card .front {
+    left: 0;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.flashcardOptions {
+    margin-top: 0.5rem;
+}
+
+.flashcardOption {
+    margin-top: 0.25rem;
+    color: darkgreen;
+    font-size: 0.75rem;
+}
+
+.flashcardOption:first-child {
+    margin-top: 0;
+}
