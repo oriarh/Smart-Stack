@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FlashcardList from './FlashcardList'
 import Navigation from './Navigation';
+import Footer from './Footer'
 
 export default function FlashcardApp() {
     const [flashcards, setFlashcards] = useState(flashcardQuestions)
@@ -11,6 +12,7 @@ export default function FlashcardApp() {
         <div className='container'>
           <FlashcardList flashcardsListProp = {flashcards} />
         </div>
+        <Footer/>
     </>
   )
 }   

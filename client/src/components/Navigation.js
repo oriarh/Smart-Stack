@@ -5,7 +5,7 @@ import { faBars, faTimes } from '@fortawesome/fontawesome-free-solid'
 
 export default function () {
   const Auth = {
-    loggedIn: true
+    loggedIn: false
   }
     
     function CustomLink({ children, to, ...props }) {
