@@ -4,10 +4,11 @@ import Flashcard from './Flashcard'
 export default function FlashcardList( { flashcardsListProp } ) {
   return (
     <div>
-      {flashcardsListProp.map( flashcard => {
+      <Flashcard flashcard={flashcardsListProp[0]}/>
+      {/* {flashcardsListProp.map( flashcard => {
         return <Flashcard flashcard={flashcard} key={flashcard.id} />
       })
-      }
+      } */}
     </div>
   )
 }
