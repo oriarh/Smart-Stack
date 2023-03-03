@@ -24,7 +24,6 @@ const questionSchema = new mongoose.Schema({
         type: String,
         required: false,
     }
-    
 },
 {
     toJSON: {
