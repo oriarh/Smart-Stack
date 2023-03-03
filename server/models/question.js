@@ -6,6 +6,10 @@ const questionSchema = new mongoose.Schema({
         required: true,
         match: /^.{1,500}$/,
     },
+    difficulty: {
+        type: String,
+        required: true,
+    },
     questionText: {
         type: String,
         required: true,
@@ -18,7 +22,7 @@ const questionSchema = new mongoose.Schema({
     },
     username: {
         type: String,
-        required: true,
+        required: false,
     }
     
 },
