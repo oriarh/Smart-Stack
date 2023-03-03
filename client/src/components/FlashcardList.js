@@ -3,7 +3,7 @@ import Flashcard from './Flashcard'
 
 export default function FlashcardList( { flashcardsListProp } ) {
   return (
-    <div>
+    <div className='card-grid'>
       <Flashcard flashcard={flashcardsListProp[0]}/>
       {/* {flashcardsListProp.map( flashcard => {
         return <Flashcard flashcard={flashcard} key={flashcard.id} />

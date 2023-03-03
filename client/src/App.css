@@ -82,6 +82,8 @@
     height: 250px;
     transform:perspective(1000px) rotateY(var(--rotate-y, 0));
     transition: 150ms;
+    margin: auto auto;
+    font-size: xx-large;
 }
 
 .card.flip {
@@ -116,4 +118,9 @@
 
 .flashcardOption:first-child {
     margin-top: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 5rem 2rem;
 }
