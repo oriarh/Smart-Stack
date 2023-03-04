@@ -1,6 +1,14 @@
+import { useQuery } from '@apollo/client';
 import React, { useState } from 'react';
 
+import FlashcardList from './FlashcardList';
+import { QUERY_QUESTION } from '../utils/queries';
+
 export default function Flashcard( { flashcard } ) {
+  const { loading, data } = useQuery(QUERY_QUESTION);
+
+  const users = data?.users || [];
+
   const [ cardFlip, setCardFlip ] = useState(false)
 
 
