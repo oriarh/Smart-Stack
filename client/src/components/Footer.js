@@ -4,7 +4,7 @@ export default function () {
     
     return (
             <div className="footer">
-                <p>Developed by FIVE STAR studios</p>
+                Developed by FIVE STAR studios
             </div>
     )
 }

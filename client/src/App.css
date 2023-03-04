@@ -78,12 +78,13 @@
     border-radius: .25rem;
     box-shadow: 0 0 5px 2px;
     transform-style: preserve-3d;
-    width: 250px;
-    height: 250px;
+    width: 80%;
+    height: 20rem;
     transform:perspective(1000px) rotateY(var(--rotate-y, 0));
     transition: 150ms;
     margin: auto auto;
-    font-size: xx-large;
+    font-size: 50px;
+    padding-left: 1rem;
 }
 
 .card.flip {
@@ -113,7 +114,7 @@
 .flashcardOption {
     margin-top: 0.25rem;
     color: darkgreen;
-    font-size: 0.75rem;
+    font-size: 23px;
 }
 
 .flashcardOption:first-child {
@@ -122,15 +123,24 @@
 
 .container {
     max-width: 900px;
-    margin: 5rem 2rem;
+    margin: 3rem 1rem 1rem 1rem;
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 28px;
     background-color: darkcyan;
     color: palegoldenrod;
-    text-align: -webkit-center;
-    font-weight: 200 !important;
+    /* text-align: -webkit-center; */
+    font-weight: 300 !important;
     padding: 1%;
     margin-top: 1%;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

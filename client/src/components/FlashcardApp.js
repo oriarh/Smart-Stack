@@ -12,6 +12,9 @@ export default function FlashcardApp() {
         <div className='container'>
           <FlashcardList flashcardsListProp = {flashcards} />
         </div>
+        <div className='buttonContainer'>
+          <button className='nextButton btn btn-primary'>Next</button>
+        </div>
         <Footer/>
     </>
   )

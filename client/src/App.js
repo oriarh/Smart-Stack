@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div className="">
-      <header className="">
         <FlashcardApp/>
+      <header className="">
         {/* <Routes>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/login' element={<Login/>}/>
