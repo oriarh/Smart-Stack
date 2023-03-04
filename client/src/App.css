@@ -136,11 +136,20 @@
     /* text-align: -webkit-center; */
     font-weight: 300 !important;
     padding: 1%;
-    margin-top: 1%;
+    margin-top: 23vh;
 }
 
 .buttonContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.signupForm {
+    text-align: center;
+}
+
+.signupHeading {
+    text-align: center;
+    margin-bottom: 1rem;
 }
