@@ -7,8 +7,9 @@ import Landingpage from './components/Landingpage';
 import FlashcardApp from './components/FlashcardApp';
 import Signup from './components/Signup';
 
+//uri: '/graphql',
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: 'http://localhost:9090/graphql',
   cache: new InMemoryCache(),
 });
 
@@ -27,7 +28,6 @@ function App() {
             <Route path='/' element={<Landingpage/>}/>
           </Routes> */}
         </header>
-        <Signup/>
       </div>
     </ApolloProvider>
   );
