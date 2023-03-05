@@ -27,6 +27,7 @@ function App() {
             <Route path='/' element={<Landingpage/>}/>
           </Routes> */}
         </header>
+        <Signup/>
       </div>
     </ApolloProvider>
   );

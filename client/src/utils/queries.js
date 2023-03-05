@@ -23,3 +23,13 @@ export const QUERY_QUESTION = gql`
         }
     }
 `;
+
+export const QUERY_LOGGEDINUSER = gql`
+    query loggedInUser {
+        loggedInUser{
+            _id
+            username
+            email
+        }
+    }
+`;
