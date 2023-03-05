@@ -11,8 +11,8 @@ const resolvers = {
             return await Question.find({});
         },
         question: async (parent, args) => {
-            const { id } = args;
-            return await Question.findById(id);
+            const { questionId } = args;
+            return await Question.findById({ _id: questionId });
         },
         loggedInUser: async (parent, args, context) => {
             if (context.users) {

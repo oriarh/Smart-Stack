@@ -25,7 +25,7 @@ const typeDefs = gql`
 
     type Query {
         users: [Users]
-        question: [Question]
+        question(questionId: ID!): Question
         allQuestions: [Question]
         favorites: [Question]
         loggedInUser: Users
