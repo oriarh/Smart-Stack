@@ -2,55 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import FlashcardList from './FlashcardList'
 import Navigation from './Navigation';
-import Footer from './Footer'
+import { QUERY_QUESTION } from '../utils/queries'
+import { useQuery, useMutation } from '@apollo/client';
 
 import { QUERY_QUESTIONS } from '../utils/queries';
 
 export default function FlashcardApp() {
-//    const [flashcards, setFlashcards] = useState(flashcardQuestions)
-    //const [flashcards, setFlashcards] = useState([])
+    const [flashcards, setFlashcards] = useState(flashcardQuestions)
+    const [ loading, data ] = useQuery(QUERY_QUESTION)
 
-    const { loading, data } = useQuery(QUERY_QUESTIONS); // returns [true|false, data:...]
-
-    const questions = data?.allQuestions || [];
-
-    const [questionIndex, setQuestionIndex] = useState(0)
-
-    function setQuestionIndexIfOk() {
-     if(questionIndex>=data.allQuestions.length-1) {
-      // TODO: Show FINISHED flashcards
-      alert("Finished flash cards!")
-     } else {
-      setQuestionIndex(questionIndex+1)
-     }
+    function getQuestion () {
+      
     }
 
   return (
     <>        
         <Navigation/>
         <div className='container'>
-          <div className="card">
-            
-            <h3 className="question-title">{JSON.stringify(data?.allQuestions[questionIndex].questionText)}</h3>
-            <div className="question-detail">{JSON.stringify(data?.allQuestions[questionIndex].questionText)}</div>
-          </div>
-
-
-          {/* {loading?(<div>Loaded</div>):<div>Loading..</div>} */}
-          {/* {
-          data?.allQuestions.map(question=>{
-            // (<FlashcardList flashcards = {questions} />)
-            <div className="card">
-              <div className="question-text">Question: {question.questionText}</div>
-            </div>
-          })
-          } */}
-            
+          <FlashcardList flashcardsListProp = {flashcards[0]} />
         </div>
         <div className='buttonContainer'>
-          <button className='nextButton btn btn-primary' onClick={()=>{setQuestionIndexIfOk()}}>Next</button>
+          <button className='nextButton btn btn-primary' onClick={() => {
+            console.log(Math.floor(Math.random()*flashcardQuestions.length))
+          }}>Next</button>
         </div>
-        <Footer/>
     </>
   )
 }   
