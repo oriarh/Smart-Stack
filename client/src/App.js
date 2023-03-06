@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Landingpage from './components/Landingpage';
 import FlashcardApp from './components/FlashcardApp';
 import Signup from './components/Signup';
+import Footer from './components/Footer';
 
 //uri: '/graphql',
 const client = new ApolloClient({
@@ -19,7 +20,6 @@ function App() {
   
     <ApolloProvider client={client}>
       <div className="">
-        <header className="">
           <FlashcardApp/>
           {/* <Signup/> */}
           {/* <Routes>
@@ -27,7 +27,7 @@ function App() {
             <Route path='/login' element={<Login/>}/>
             <Route path='/' element={<Landingpage/>}/>
           </Routes> */}
-        </header>
+        <Footer />
       </div>
     </ApolloProvider>
   );
