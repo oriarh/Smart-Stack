@@ -37,5 +37,9 @@ const usersSchema = new mongoose.Schema({
     },
 });
 
+usersSchema.methods.isCorrectPassword = async function (password) {
+    return bycrypt.compare(password, this.password)
+}
+
 const Users =  mongoose.model('User', usersSchema);
 module.exports = Users;
