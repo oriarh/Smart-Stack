@@ -9,6 +9,7 @@ import { QUERY_QUESTIONS } from '../utils/queries';
 export default function FlashcardApp() {
 //    const [flashcards, setFlashcards] = useState(flashcardQuestions)
     //const [flashcards, setFlashcards] = useState([])
+    const [ cardFlip, setCardFlip ] = useState(false)
 
     const { loading, data } = useQuery(QUERY_QUESTIONS); // returns [true|false, data:...]
 
@@ -29,9 +30,9 @@ export default function FlashcardApp() {
     <>        
         <Navigation/>
         <div className='container'>
-          <div className="card">
+          <div className={`card ${cardFlip ? 'flip' : ''}`} onClick={() => {setCardFlip(!cardFlip)}}>
             
-            <h3 className="question-title">{JSON.stringify(data?.allQuestions[questionIndex].questionText)}</h3>
+            <h3 className="question-title">{JSON.stringify(data?.allQuestions[questionIndex].questionTitle)}</h3>
             <div className="question-detail">{JSON.stringify(data?.allQuestions[questionIndex].questionText)}</div>
           </div>
 

@@ -12,7 +12,7 @@ export default function Flashcard( { flashcard } ) {
  console.log(flashcard);
   return (
     <> 
-      <div className={`card ${cardFlip ? 'flip' : ''}`} onClick={() => setCardFlip(!cardFlip)}>
+      <div className={`card ${cardFlip ? 'flip' : ''}`} onClick={() => {setCardFlip(!cardFlip)}}>
         <div className='front'>
           {flashcard.questionText}
           <div className='flashcardOptions'>

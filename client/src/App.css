@@ -72,19 +72,19 @@
 }
 
 .card.card {
-    display: flex ;
-    justify-content: center;
-    align-items: center;
-    border-radius: .25rem;
-    box-shadow: 0 0 5px 2px;
-    transform-style: preserve-3d;
-    width: 80%;
-    height: 20rem;
-    transform:perspective(1000px) rotateY(var(--rotate-y, 0));
-    transition: 150ms;
-    margin: auto auto;
-    font-size: 50px;
-    padding-left: 1rem;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        border-radius: .25rem;
+        box-shadow: 0 0 5px 2px;
+        transform-style: preserve-3d;
+        width: 80%;
+        height: 20rem;
+        transform:perspective(1000px) rotateY(var(--rotate-y, 0));
+        transition: 150ms;
+        margin: auto auto;
+        font-size: 50px;
+        padding-left: 1rem;
 }
 
 .card.flip {
