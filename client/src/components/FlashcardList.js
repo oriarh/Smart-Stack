@@ -5,7 +5,8 @@ export default function FlashcardList( { flashcards } ) {
   console.log(flashcards);
   return (
     <>
-      <Flashcard flashcard={flashcardsListProp}/>
+    HI
+      {/* <Flashcard flashcard={flashcards[0]}/> */}
       {/* {flashcardsListProp.map( flashcard => {
         return <Flashcard flashcard={flashcard} key={flashcard.id} />
       })

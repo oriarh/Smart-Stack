@@ -5,6 +5,7 @@ import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 export default function () {
     const [ data, setdata ] = useState({
@@ -52,18 +53,19 @@ export default function () {
         <div className="container signup">
         <h1 className="signupHeading">Sign up:</h1>
             <form className="signupForm">
-               <label>Username:</label><br/>
-               <input className="inputUsername" value={data.username} type='text' onChange={handleOnChange} name='username' /> <br/><br/>
+               <label>Name:</label><br/>
+               <input className="inputName" type='text'/> <br/><br/>
                <label>Email Address:</label><br/>
                <input className="inputEmail"  value={data.email} type='email' onChange={handleOnChange} name="email" /><br/><br/>
                <label>Password:</label><br/>
-               <input className="inputPassword" value={data.password} type='password' onChange={handleOnChange} name= "password" /><br/>
+               <textarea className="inputPassword" value={data.password} onChange={handleOnChange} name= "myPassword" /><br/>
                <p id="errorMessage"></p>
                <p>{errorEmail}</p>
                <p>{errorMessage}</p>
                <input type="submit"/>
             </form>
         </div>
+        <Footer />
         </>
     )
 }
