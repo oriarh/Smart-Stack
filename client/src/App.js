@@ -21,7 +21,7 @@ function App() {
       <div className="">
         <header className="">
           <FlashcardApp/>
-          {/* <Signup/> */}
+          <Signup/>
           {/* <Routes>
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/login' element={<Login/>}/>
