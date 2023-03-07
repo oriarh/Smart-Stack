@@ -32,8 +32,9 @@ export default function FlashcardApp() {
         <div className='container'>
           <div className={`card ${cardFlip ? 'flip' : ''}`} onClick={() => {setCardFlip(!cardFlip)}}>
             
-            <h3 className="question-title">{JSON.stringify(data?.allQuestions[questionIndex].questionTitle)}</h3>
-            <div className="question-detail">{JSON.stringify(data?.allQuestions[questionIndex].questionText)}</div>
+            <h3 className={`question-title ${!cardFlip ? "question-title" : "hide"}`}>{JSON.stringify(data?.allQuestions[questionIndex].questionTitle)}</h3>
+            <div className={`question-detail ${!cardFlip ? "question-detail" : "hide"}`}>{JSON.stringify(data?.allQuestions[questionIndex].questionText)}</div>
+            <div className='back'>{JSON.stringify(data?.allQuestions[questionIndex].answerText)}</div>
           </div>
 
 

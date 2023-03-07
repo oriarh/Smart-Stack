@@ -2,6 +2,7 @@ const { Users, Question } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
+
 const resolvers = {
     Query: {
         users: async () => {
@@ -23,11 +24,13 @@ const resolvers = {
     },
 
     Mutation: {
-        addUser: async (parent, { username, email, password }) => {
-            const user = await Users.create({ username, email, password });
+
+        addUser: async (parent, args) => {
+            const user = await Users.create(args);
             const token = signToken(user);
             return { token, user };
         },
+
         login: async (parent, { email, password }) => {
             const user = await Users.findOne({ email });
 
@@ -45,6 +48,7 @@ const resolvers = {
 
             return { token, user };
         },
+        
         addQuestion: async (parent, { questionTitle, difficulty, questionText, answerText, username }) => {
             return await Question.create({ questionTitle, difficulty, questionText, answerText, username });
         }
