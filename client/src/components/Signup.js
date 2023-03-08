@@ -68,7 +68,7 @@ const Signup = () => {
         <>
         <Navigation/>
         <div className="container signup">
-        <h1 className="signupHeading">Sign up:</h1>
+        <h1 className="signupHeading">Sign Up</h1>
         
         {data ? (
                 <div>
@@ -85,7 +85,6 @@ const Signup = () => {
                         onChange={handleOnChange}
                         name="username"
                         /> 
-                        
                         <br/><br/>
                     <label>Email Address:</label><br/>
                     <input 

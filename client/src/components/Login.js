@@ -43,8 +43,8 @@ const Login = (props) => {
     return (
         <>
         <Navigation/>
-        <div className="container Login">
-        <h1 className="signupHeading">Login:</h1>
+        <div className="container signup">
+        <h1 className="signupHeading">Login</h1>
         
         {data ? (
                 <div>
@@ -52,7 +52,7 @@ const Login = (props) => {
                     {/* <Link to="/flashcard"> Log In </Link> */}
                 </div>
                 ) : (
-                <form className="loginForm" onSubmit={handleFormSubmit}>
+                <form className="signupForm" onSubmit={handleFormSubmit}>
                     <label>Email Address:</label><br/>
                     <input 
                         className="inputEmail"  
