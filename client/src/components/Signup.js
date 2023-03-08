@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+
 
 
 import Auth from '../utils/auth';
@@ -32,7 +33,6 @@ const Signup = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(formState);
         
         try {
             const { data } = await addUser({
@@ -40,6 +40,7 @@ const Signup = () => {
             });
 
             Auth.login(data.addUser.token);
+            window.location.href="/login";
         } catch (e) {
             console.error(e);
         }
@@ -72,7 +73,7 @@ const Signup = () => {
         {data ? (
                 <div>
                     Sign Up Successful! Please Log In.
-                    <Link to="/"> Log In </Link>
+                    <Link to="/login"> Log In </Link>
                 </div>
                 ) : (
                 <form className="signupForm" onSubmit={handleFormSubmit}>

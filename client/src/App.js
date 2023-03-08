@@ -21,13 +21,14 @@ function App() {
     <ApolloProvider client={client}>
       <div className="">
         <header className="">
-          <FlashcardApp/>
+          {/* <FlashcardApp/>
           <Signup/>
-          <Login/>
+          <Login/> */}
           <Routes>
-            {/* <Route path='/signup' element={<Signup/>}/> */}
-            {/* <Route path='/login' element={<Login/>}/> */}
-            {/* <Route path='/' element={<Landingpage/>}/> */}
+            <Route path='/flashcard' element={<FlashcardApp/>}/>
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/' element={<Landingpage/>}/>
           </Routes>
         </header>
       </div>
