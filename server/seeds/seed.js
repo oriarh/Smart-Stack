@@ -1,4 +1,4 @@
-const Question = require ('../models/product');
+const Question = require ('../models');
 
 const mongoose = require ('mongoose');
 
