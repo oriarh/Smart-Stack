@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -21,34 +21,35 @@ const Login = (props) => {
         });
     };
 
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
         try {
             const { data } = await login({
                 variables: { ...formState },
             });
 
             Auth.login(data.login.token);
+            window.location.href="/flashcard";
         } catch (e) {
             console.log(e);
         }
 
-        setFormState({
-            email: '',
-            password: '',
-        });
+        // setFormState({
+        //     email: '',
+        //     password: '',
+        // });
     };
 
     return (
         <>
         <Navigation/>
         <div className="container Login">
-        <h1 className="signupHeading">Log In:</h1>
+        <h1 className="signupHeading">Login:</h1>
         
         {data ? (
                 <div>
                     Loggin Successful
-                    <Link to="/"> Log In </Link>
+                    {/* <Link to="/flashcard"> Log In </Link> */}
                 </div>
                 ) : (
                 <form className="loginForm" onSubmit={handleFormSubmit}>
