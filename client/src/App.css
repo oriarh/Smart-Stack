@@ -54,21 +54,29 @@
     background-color: transparent;
 }
 
-#topImg {
-    width: 25%;
-    height: auto;
-    margin: auto;
-    display: block;
+.imgContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .welcomeMessage {
-    position: absolute;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
     background-color: darkcyan;
-    font-size: 30px;
+    font-size: 40px;
     color: palegoldenrod;
-    padding: 10px;
-    font-weight: 200;
+    padding: 10px 0px 10px 0px;
+    font-weight: 200px;
+}
+
+#topImg {
+    width: 30vw;
+    margin:auto;
+    display: block;
 }
 
 .card.card {
@@ -154,6 +162,27 @@
     margin-bottom: 1rem;
 }
 
+.signupBtn {
+    background-color: darkcyan;
+    color: palegoldenrod;
+    margin-top: 1.3rem;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .hide {
     display: none;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 1000px) {
+    #topImg {
+        width: 50vw;
+    }
+
+    .navLinks.active {
+        width:fit-content
+    }
 }

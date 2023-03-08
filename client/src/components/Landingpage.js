@@ -10,7 +10,7 @@ export default function () {
     <>
         <Navigation/>
         <div className="imgContainer">
-            <div className="welcomeMessage">Welcome to the best app ever</div>
+            <div className="welcomeMessage">Welcome to Smart Stacks</div>
             <img id="topImg" src={backgroundImg} alt="Background Image"/>
         </div>
         <Footer />
