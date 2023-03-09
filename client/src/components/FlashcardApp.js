@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import FlashcardList from './FlashcardList'
 import Navigation from './Navigation';
 import Footer from './Footer'
+import Auth from '../utils/auth';
 
 import { QUERY_QUESTIONS } from '../utils/queries';
 
@@ -25,6 +26,12 @@ export default function FlashcardApp() {
       setQuestionIndex(questionIndex+1)
      }
     }
+
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+      if (!token) {
+        return window.location.assign('/');
+      }
 
   return (
     <>        
