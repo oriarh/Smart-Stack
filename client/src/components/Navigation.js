@@ -2,11 +2,12 @@ import React from 'react'
 import { Link, useMatch, useResolvedPath} from 'react-router-dom'
 import {FontAwesomeIcon }from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/fontawesome-free-solid'
+import Auth from '../utils/auth'
 
 export default function () {
-  const Auth = {
-    loggedIn: false
-  }
+  // const Auth = {
+  //   loggedIn: false
+  // }
     
     function CustomLink({ children, to, ...props }) {
         let resolved = useResolvedPath(to);
@@ -29,13 +30,13 @@ export default function () {
                         <div className="col-md-12 col-lg-7">
                             <h2 className="headerName"><Link className="headerName" to='/'>Smart Stack</Link></h2>
                         </div>
-                        {Auth.loggedIn ? (
+                        {Auth.loggedIn() ? (
                           <>
                             <div className="col-lg-auto headerLinks"><CustomLink to="/begginer">Begginer</CustomLink></div>
                             <div className="col-lg-auto headerLinks"><CustomLink to="/intermediate">Intermediate</CustomLink></div>
                             <div className="col-lg-auto headerLinks"><CustomLink to="/advanced">Advanced</CustomLink></div>
                             <div className="col-lg-auto headerLinks"><CustomLink to="/submitquestion">Submit a Question</CustomLink></div>
-                            <div className="col-lg-auto headerLinks"><CustomLink to="/signup">Logout</CustomLink></div>
+                            <div className="col-lg-auto headerLinks logoutBtn"><Link to="/login" onClick={() => {Auth.logout()}}>Logout</Link></div>
                           </>
                         ) : (
                           <>
