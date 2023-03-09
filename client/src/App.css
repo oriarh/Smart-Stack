@@ -177,6 +177,14 @@
     display: none;
 }
 
+.back {
+    color: red;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+
+}
+
 @media only screen and (min-width: 350px) and (max-width: 1000px) {
     #topImg {
         width: 50vw;
