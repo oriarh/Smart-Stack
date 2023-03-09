@@ -178,7 +178,7 @@
 }
 
 .back {
-    color: red;
+    color: rgb(0, 0, 0);
     width: fit-content;
     height: fit-content;
     font-size: 25px;
