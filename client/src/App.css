@@ -14,16 +14,24 @@
     }
 }
 
-.headerLinks {
+.headerLinks, 
+.logoutBtn a{
     margin: auto !important;
     text-decoration: none !important;
     color: palegoldenrod;
 }
 
+
 @media screen and (max-width: 991px) {
-    .headerLinks {
+    .headerLinks
+    {
         text-align: center;
         margin: 0.10% auto;
+    }
+
+    .logoutBtn a{
+        float: left;
+        padding-left: 4px;
     }
 }
 
@@ -184,6 +192,7 @@
     font-size: 25px;
 
 }
+
 
 @media only screen and (min-width: 350px) and (max-width: 1000px) {
     #topImg {
