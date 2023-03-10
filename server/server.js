@@ -17,7 +17,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.resolver(__dirname,"..", "client/build")));
+app.use(express.static(path.resolve(__dirname,"..", "client/build")));
 
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
