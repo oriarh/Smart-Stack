@@ -14,7 +14,7 @@
 - [Questions](#questions)
 
 ## Installation
-A link to the Smart Stack application can found here:
+A link to the Smart Stack application can found here: https://smart-stack.herokuapp.com/
 
 
 No further installation is required to test out the application. The repository containing the working code to the application can be found here: https://github.com/oriarh/Smart-Stack
