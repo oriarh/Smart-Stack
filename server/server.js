@@ -3,6 +3,7 @@ const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } =require('./utils/auth');
 const path = require('path');
+const fs = require("fs");
 
 const db = require('./config/connection');
 
@@ -25,6 +26,7 @@ app.use(express.static(path.resolve(__dirname,"..", "client/build")));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,"..", "client/build/index.html"));
 });
+fs.writeFile("log.txt", process.env.PORT, "utf8", ()=>{});
 
 
 
