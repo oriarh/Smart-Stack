@@ -9,14 +9,14 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 
 //uri: '/graphql',
-/* const client = new ApolloClient({
+ const client = new ApolloClient({
   uri: 'http://localhost:9090/graphql',
   cache: new InMemoryCache(),
-}); */
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
+}); 
+// const client = new ApolloClient({
+//   uri: '/graphql',
+//   cache: new InMemoryCache(),
+// });
 
 function App() {
 

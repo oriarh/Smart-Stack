@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname,"..", "client/build")));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,"..", "client/build/index.html"));
+    res.sendFile(path.join(__dirname,"..", "client/build"));
 });
 if(process?.env?.PORT)
 fs.writeFile("log.txt", process.env.PORT, "utf8", ()=>{});
